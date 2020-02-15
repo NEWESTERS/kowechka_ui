@@ -1,0 +1,40 @@
+@import '../../styles/colors';
+@import '../../styles/geometry';
+@import '../../styles/fonts';
+
+button.button {
+	border: none;
+	border-radius: $border-radius;
+	@include font-bold;
+	@include ellipsis;
+	cursor: pointer;
+
+	&.primary {
+		height: 40px;
+		background-color: $primary-color;
+		color: white;
+		padding: 0 20px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: darken($color: $primary-color, $amount: 5);
+			transform: scale(0.95);
+		}
+	}
+
+	&.secondary {
+		height: 30px;
+		border: 2px solid $primary-color;
+		background: none;
+		color: $text-color;
+		padding: 0 10px;
+		transform: scale(1);
+		transition: all 0.3s ease;
+
+		&:hover {
+			border-color: darken($color: $primary-color, $amount: 5);
+			background-color: darken($color: white, $amount: 5);
+			transform: scale(0.95);
+		}
+	}
+}

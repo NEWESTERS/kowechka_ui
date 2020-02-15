@@ -11,3 +11,8 @@ $font-family: 'Arial';
 	font-weight: bold;
 	font-size: $font-size;
 }
+
+@mixin ellipsis {
+	white-space: pre;
+	text-overflow: ellipsis;
+}

@@ -4,7 +4,18 @@
 .ui-container {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+
+	&.left {
+		align-items: flex-start;
+	}
+
+	&.center {
+		align-items: center;
+	}
+
+	&.right {
+		align-items: flex-end;
+	}
 
 	label {
 		@include font-bold(0.8em);
