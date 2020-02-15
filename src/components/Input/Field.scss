@@ -1,9 +1,17 @@
 @import '../../styles/geometry';
+@import '../../styles/colors';
+@import '../../styles/fonts';
 
 .field {
-	height: 20px;
-	border: 1px solid black;
+	height: 25px;
+	width: 100%;
+	border: 2px solid $primary-color;
 	border-radius: $border-radius;
 	overflow: hidden;
-	padding-left: 5px;
+	padding: 0 5px;
+	color: $text-color;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	@include font-regular;
 }

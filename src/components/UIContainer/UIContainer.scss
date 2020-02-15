@@ -1,0 +1,17 @@
+@import '../../styles/fonts';
+@import '../../styles/colors';
+
+.ui-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	label {
+		@include font-bold(0.8em);
+		color: $text-color;
+	}
+
+	& > * + * {
+		margin-top: 5px;
+	}
+}

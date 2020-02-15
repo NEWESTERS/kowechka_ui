@@ -1,4 +1,10 @@
+@import '../../styles/fonts';
+@import '../../styles/colors';
+
 input {
 	border: none;
 	width: 100%;
+	@include font-regular;
+	outline: none;
+	color: $text-color;
 }
