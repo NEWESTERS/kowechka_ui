@@ -1,0 +1,9 @@
+@import '../../styles/geometry';
+
+.field {
+	height: 20px;
+	border: 1px solid black;
+	border-radius: $border-radius;
+	overflow: hidden;
+	padding-left: 5px;
+}
