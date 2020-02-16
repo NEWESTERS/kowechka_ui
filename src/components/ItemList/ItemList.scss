@@ -1,0 +1,25 @@
+@import '../../styles/fonts';
+@import '../../styles/colors';
+@import '../../styles/geometry';
+
+.item-list {
+	@include font-regular;
+	color: $text-color;
+
+	&-item {
+		padding: 5px;
+		transition: all 0.3s ease;
+		border-radius: $border-radius;
+	}
+
+	&.clickable {
+		.item-list-item {
+			cursor: pointer;
+
+			&:hover {
+				background-color: $primary-color;
+				color: white;
+			}
+		}
+	}
+}

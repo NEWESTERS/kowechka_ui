@@ -1,0 +1,11 @@
+@import '../../styles/colors';
+@import '../../styles/geometry';
+
+.text {
+	.highlight {
+		background-color: $secondary-color;
+		border-radius: $border-radius;
+		padding: 1px 3px;
+		margin: -1px -3px;
+	}
+}

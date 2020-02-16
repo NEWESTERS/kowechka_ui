@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { isNil } from 'ramda';
 
-export interface ISwitchProps {
-	open?: boolean;
-	onOpen?: () => void;
-	onClose?: () => void;
-}
+import { AllOrNothing } from '../../typeHelpers';
+
+export type ISwitchProps = AllOrNothing<{
+	open: boolean;
+	onOpen: () => void;
+	onClose: () => void;
+}>;
 
 export function useSwitch(props: ISwitchProps) {
 	const { open, onClose, onOpen } = props;

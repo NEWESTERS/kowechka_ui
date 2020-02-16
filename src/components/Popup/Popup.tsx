@@ -5,10 +5,10 @@ import { ISwitchProps, useSwitch } from './switchLogic';
 import { useClickOutsideListener } from '../../hooks/useClickOutside';
 import './Popup.scss';
 
-interface IProps extends ISwitchProps {
+type IProps = ISwitchProps & {
 	className?: string;
 	trigger: ReactElement;
-}
+};
 
 const Popup: FC<IProps> = props => {
 	const { className, trigger, children, ...switchProps } = props,

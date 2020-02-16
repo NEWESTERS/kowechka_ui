@@ -27,6 +27,7 @@
 		}
 
 		&:not(.open) {
+			box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
 			transform: rotate(90deg) scale(0);
 		}
 	}
