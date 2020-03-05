@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import { UIContainer } from '../src/components/UIContainer';
-import TabFilter from '../src/components/TabFilter';
 import MaskInput from '../src/components/MaskInput';
 
 interface OwnProps {
