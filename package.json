@@ -17,7 +17,6 @@
 		"@types/ramda": "^0.26.41",
 		"classnames": "^2.2.6",
 		"ramda": "^0.27.0",
-		"react-input-mask": "^2.0.4",
 		"sass": "^1.25.0",
 		"sass-loader": "^8.0.2"
 	},

@@ -1,25 +1,22 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import './MaskInput.css';
 import cross from './close-gray.svg';
 
 interface OwnProps {
 	placeholder?: string,
 	mask: string,
-	value?: string,
+	value: string,
 	onClick?: (e: any) => any,
 	onChange?: (e: any) => any,
 	onBlur?: (e: any) => any,
 	deleteString?: () => any,
-	color?: string
 }
 
 type Props = OwnProps;
 
 const MaskInput: FunctionComponent<Props> = (props) => {
 
-	const { mask, value, onClick, onChange, color, placeholder, onBlur, deleteString } = props;
-	const [_value, _setValue] = useState(value || '');
-	const inputEl = useRef(null);
+	const { mask, value, onClick, onChange, placeholder, onBlur, deleteString } = props;
 
 	//todo need bugfix
 	const maskStencil = (value: string) => {
@@ -33,40 +30,30 @@ const MaskInput: FunctionComponent<Props> = (props) => {
 		return _mask.join('');
 	};
 
-
-	useEffect(() => {
-		_setValue(value || '');
-	}, [value]);
+	//
+	// useEffect(() => {
+	// 	_setValue(value || '');
+	// }, [value]);
 
 	const handleBlur = (e: any) => {
-		if (_value !== '') {
-			onBlur && onBlur(e);
-		}
-		else {
-			_setValue(value || '');
-		}
+			onBlur && onBlur(e.target.value);
 	};
 	const handleChange = (e: any) => {
-		_setValue(e.target.value.replace(/\D/g, ''));
-		console.log(_value);
-		onChange && onChange(e);
+		onChange && onChange(e.target.value);
 	};
 
 	return (
-		<div className={'mask-input-wrapper'}>
+		<div className='mask-input-wrapper'>
 			<input
-				ref={inputEl}
-				type={'text'}
+				type='text'
 				placeholder={placeholder}
-				className={'MaskInput'}
-				value={maskStencil(_value).toString()}
+				className='mask-input'
+				value={maskStencil(value)}
 				onClick={onClick}
 				onChange={handleChange}
-				style={{ borderColor: color }}
 				onBlur={handleBlur}
 			/>
 			<img src={cross} onClick={() => {
-				_setValue('');
 				deleteString && deleteString();
 			}}/>
 		</div>

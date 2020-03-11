@@ -1,4 +1,4 @@
-.MaskInput{
+.mask-input{
     width: 100%;
     height: calc(1.5em + 0.75rem + 2px);
     padding-left: 0.475rem;
@@ -13,11 +13,11 @@
     transition: all 0.15s ease-in-out;
 }
 
-.MaskInput:focus{
+.mask-input:focus{
     box-shadow: 0px 6px 10px -6px rgb(71, 87, 213);
 }
 
-.MaskInput::placeholder {
+.mask-input::placeholder {
     color: #b8b8b8;
 }
 
