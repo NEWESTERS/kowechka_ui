@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import './MaskInput.css';
 import cross from './close-gray.svg';
 
@@ -6,9 +6,9 @@ interface OwnProps {
 	placeholder?: string,
 	mask: string,
 	value: string,
-	onClick?: (e: any) => any,
-	onChange?: (e: any) => any,
-	onBlur?: (e: any) => any,
+	onClick?: (e: string) => any,
+	onChange?: (e: string) => any,
+	onBlur?: (e: string) => any,
 	deleteString?: () => any,
 }
 
